@@ -612,7 +612,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Respawn()
+/*    public void Respawn()
     {
         EndGrapple();
         rail = null;
@@ -628,6 +628,34 @@ public class PlayerMovement : MonoBehaviour
         railCooldown = 0.3f;
         playerCamera.transform.localPosition = cameraStartLocal;
         playerCamera.transform.localRotation = Quaternion.identity;
+    }
+*/
+    public void Respawn()
+    {
+    EndGrapple();
+    rail = null;
+    sliding = false;
+
+    controller.enabled = false;
+    SetCrouched(false);
+
+    // Check if a checkpoint has been reached; otherwise fall back to original start transform
+    if (CheckpointManager.Instance != null && CheckpointManager.Instance.TryGetCheckpoint(out Vector3 cpPos, out Quaternion cpRot))
+    {
+        transform.SetPositionAndRotation(cpPos, cpRot);
+    }
+    else
+    {
+        transform.SetPositionAndRotation(spawnPosition, spawnRotation);
+    }
+
+    controller.enabled = true;
+    velocity = Vector3.zero;
+    pitch = cameraRoll = wallTime = wallCooldown = groundIgnoreTime = wallJumpGrace = 0f;
+    wallExitControlTimer = 0f;
+    railCooldown = 0.3f;
+    playerCamera.transform.localPosition = cameraStartLocal;
+    playerCamera.transform.localRotation = Quaternion.identity;
     }
 
     private void OnApplicationFocus(bool hasFocus)
