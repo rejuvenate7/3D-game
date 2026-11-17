@@ -1,7 +1,7 @@
 Game Name: Untitled Parkour Game
 
 Group Members: 
-- Joshua Sherrod (game design, C# scripting)
+- Joshua Sherrod (Checkpoint system, Game design, C# scripting)
 - Lyvette Reyes (game design, C# scripting)
 - Reinaldo Roldan (level design, C# scripting)
 - Tommy Teschner (game design, C# scripting)
