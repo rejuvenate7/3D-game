@@ -6,7 +6,7 @@ Group Members:
 - Reinaldo Roldan (level design, C# scripting)
 - Tommy Teschner (game design, C# scripting)
 
-Current Target: A parkour game with fast movement mechanics like wall riding, grappling, sliding, and rail grinding. The game loop involves the player moving through levels, hitting checkpoints and a maintaining their health. If the player's health falls below 0, then they lose. Players lose health when they fall off the map and respawn back at a checkpoint.
+Current Target: A parkour game with fast movement mechanics like wall riding, grappling, sliding, and rail grinding. The game loop involves the player moving through levels, hitting checkpoints and maintaining their health. If the player's health falls below 0, then they lose. Players lose health when they fall off the map and respawn back at a checkpoint.
 
 Gameplay:
 
